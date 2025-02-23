@@ -22,6 +22,11 @@ const ProductList = ({ products, fetchProducts, fetchCart, setShowModal }) => {
 
   const deleteProduct = async (id) => {
     try {
+      const cartProducts = await fetch(`${SERVER_URL}/cart`).then((res) => res.json());
+    if (cartProducts.some((product) => product.id === id)) {
+      alert('Remove Product From Cart!');
+      return;
+    }
       await fetch(`${SERVER_URL}/products/${id}`, { method: 'DELETE' });
       fetchProducts();
     } catch (error) {
@@ -30,14 +35,14 @@ const ProductList = ({ products, fetchProducts, fetchCart, setShowModal }) => {
   };
 
   return (
-    <div>
-      <div className="flex justify-evenly"><h2 className='text-2xl font-bold'>Products</h2>
-        <button onClick={() => setShowModal(true)} className="bg-green-500 px-4 py-2 rounded-lg border border-transparent transition-all hover:border-white">
+    <div className="bg-white text-black">
+      <div className="flex justify-evenly"><h2 className='text-2xl font-bold'>My Products</h2>
+        <button onClick={() => setShowModal(true)} className="bg-green-500 px-4 py-2 rounded-lg border border-transparent transition-all hover:border-white text-white hover:bg-white hover:text-green-500">
           Add Product
         </button></div>
-      <div className="p-4 grid grid-cols-2 gap-4 overflow-y-scroll h-screen w-[80%] ml-18">
+      <div className="p-4 grid grid-cols-2 gap-4 overflow-y-scroll h-screen w-[80%] ml-18 custom-scrollbar">
         {products.map((product) => (
-          <div key={product.id} className="border p-4 rounded-lg shadow-lg">
+          <div key={product.id} className="border p-4 rounded-lg shadow-lg bg-white border border-black">
             <img src={product.image} alt={product.name} className="w-full h-40 object-cover rounded-md" />
             <h2 className="text-lg font-bold mt-2">{product.name}</h2>
             <p className="text-gray-700">{product.price}</p>

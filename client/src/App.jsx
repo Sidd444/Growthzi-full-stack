@@ -39,14 +39,15 @@ const App = () => {
   };
   
   return (
-    <div className="min-h-screen flex flex-col w-full">
+    <div className="min-h-screen flex flex-col w-full bg-white">
       <Navbar/>
       <Face/>
-      <main className="flex-grow flex flex-row">
-        <div className="flex-grow">
+      <hr />
+      <main className="flex-grow flex flex-row bg-white mt-10 border">
+        <div className="flex-grow w-1/2">
           <ProductList products={products} fetchProducts={fetchProducts} fetchCart={fetchCart} setShowModal={setShowModal}/>
         </div>
-        <div className='flex-grow'>
+        <div className='flex-grow w-1/2'>
           <Cart cart={cart} fetchCart={fetchCart} products={products} />
         </div>
       </main>

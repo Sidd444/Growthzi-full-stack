@@ -26,7 +26,7 @@ const Cart = ({ cart, fetchCart, products }) => {
   }, [cart, products]);
 
   return (
-    <div className="p-4 border-t mt-4 mr-2">
+    <div className="p-4 border-t mt-4 mr-2 bg-white text-black custom-scrollbar">
       <h2 className="text-xl font-bold">Cart</h2>
       <ul>
         {cartItems.map((item) => (
