@@ -25,7 +25,7 @@ This is a **Single Page Application (SPA)** e-commerce platform built with **Vit
 - Flask-SQLAlchemy
 
 **Database:**
-- SQLite 
+- Sqlalchemy 
 
 ---
 
