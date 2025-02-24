@@ -6,7 +6,7 @@ This is a **Single Page Application (SPA)** e-commerce platform built with **Vit
 
 ## 📽️ Video Demo
 
-## [video Url](https://drive.google.com/file/d/1fY2CpwGDCX4eIiIsaaUMd4AS1o6oxxRG/view?usp=drivesdk)
+## [video Url](https://drive.google.com/file/d/1ekNFTf7_-4vf61QfFXAtg-C7SOkrIjyS/view?usp=drivesdk)
 
 ---
 
@@ -15,7 +15,8 @@ This is a **Single Page Application (SPA)** e-commerce platform built with **Vit
 **Frontend:**
 - Vite
 - React
-- Tailwind CSS (if used)
+- Tailwind CSS
+- Font-Awesome
 
 **Backend:**
 - Flask
@@ -23,7 +24,7 @@ This is a **Single Page Application (SPA)** e-commerce platform built with **Vit
 - Flask-SQLAlchemy
 
 **Database:**
-- SQLite (or specify if using another database)
+- SQLite 
 
 ---
 
@@ -48,7 +49,7 @@ growthzi/ ├── backend/ │   ├── app.py │   ├── models.py �
 
 ### ✅ Prerequisites
 
-- Python 3.x
+- Python 3
 - Node.js & npm
 - pip (Python package manager)
 
@@ -58,7 +59,7 @@ growthzi/ ├── backend/ │   ├── app.py │   ├── models.py �
 
 1. **Navigate to the backend directory:**
    ```bash
-   cd backend
+   cd server
 
 2. Create a virtual environment:
 
@@ -86,7 +87,7 @@ The backend will run on: http://localhost:5000
 
 1. Navigate to the frontend directory:
 
-cd frontend
+cd client
 
 
 2. Install dependencies:
@@ -152,26 +153,4 @@ Product categories & filters
 Payment gateway integration
 
 Enhanced UI/UX
-
-
-
----
-
-🤝 Contributing
-
-1. Fork the repo
-
-
-2. Create your feature branch: git checkout -b feature/feature-name
-
-
-3. Commit your changes: git commit -m "Add feature"
-
-
-4. Push to the branch: git push origin feature/feature-name
-
-
-5. Open a Pull Request
-
-
 
