@@ -19,6 +19,7 @@ This is a **Single Page Application (SPA)** e-commerce platform built with **Vit
 - Font-Awesome
 
 **Backend:**
+- Python 3.14
 - Flask
 - Flask-CORS
 - Flask-SQLAlchemy
